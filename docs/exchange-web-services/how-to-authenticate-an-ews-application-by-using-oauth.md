@@ -1,12 +1,8 @@
 ---
 title: "Authenticate an EWS application by using OAuth"
- 
- 
 manager: sethgros
-ms.date: 1/15/2015
+ms.date: 07/27/2018
 ms.audience: Developer
- 
- 
 localization_priority: Normal
 ms.assetid: 1d8d57f9-4df5-4f21-9bbb-a89e0e259052
 description: "Learn how to use OAuth authentication with your EWS Managed API applications."
@@ -29,7 +25,7 @@ You can use the OAuth authentication service provided by Azure Active Directory 
   
 To use the code in this article, you will need to have access to the following:
   
-- An [Office 365 developer account](http://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx.aspx). You can use a trial account to test your application
+- An [Office 365 developer account](http://office.microsoft.com/compare-office-365-for-business-plans-FX102918419.aspx.aspx). You can use a trial account to test your application.
     
 - The [Azure AD Authentication Library for .NET](http://msdn.microsoft.com/en-us/library/office/jj573266.aspx.aspx).
     
@@ -38,7 +34,7 @@ To use the code in this article, you will need to have access to the following:
 ## Register your application
 <a name="bk_register"> </a>
 
-To use OAuth, an application must have a client identifier and an application URI that identifies the application. If you have not yet registered your application with Azure Active Directory Services, you'll need to manually add your application by following the steps under [Register you app](http://msdn.microsoft.com/en-us/office/office365/howto/test-and-deploy-apps.aspx).
+To use OAuth, an application must have a client identifier and an application URI that identifies the application. If you have not yet registered your application with Azure Active Directory Services, you'll need to manually add your application by following the steps at [Register your app](https://apps.dev.microsoft.com/#/appList).
   
 ## Add code to get an authentication token
 <a name="bk_getToken"> </a>
@@ -53,7 +49,7 @@ The Azure AD Authentication Library for .NET simplifies getting an authenticatio
     
 4. The URI of the EWS server and the URI of the EWS endpoint. For Exchange as part of Office 365, this will be  `https://<server name>/ews/exchange.asmx`.
     
-The following code shows how to use the Azure AD Authentication Library to get an authentication token. It assumes that the information required to make the authentication request is stored in the application's App.config file. This example does not include error checking, see the [Code sample](#bk_codeSample) for the complete code. 
+The following code shows how to use the Azure AD Authentication Library to get an authentication token. It assumes that the information required to make the authentication request is stored in the application's App.config file. This example does not include error checking; see the [Code sample](#bk_codeSample) for the complete code. 
   
 ```
 string authority = ConfigurationManager.AppSettings["authority"];
@@ -155,7 +151,7 @@ namespace TestV1App
 
 The sample code requires an App.config file with the following entries:
   
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <startup>
@@ -172,9 +168,7 @@ The sample code requires an App.config file with the following entries:
 
 ## See also
 
-
-- [Authentication and EWS in Exchange](authentication-and-ews-in-exchange.md)
-    
+- [Authentication and EWS in Exchange](authentication-and-ews-in-exchange.md)   
 - [Test and deploy Office 365 apps](http://msdn.microsoft.com/en-us/office/office365/howto/test-and-deploy-apps.aspx)
     
 
